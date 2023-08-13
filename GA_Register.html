@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        <!--
+
+     I declare that this code was written by me. 
+
+     I will not copy or allow others to copy my code. 
+
+     I understand that copying code is considered as plagiarism.
+
+ 
+
+     Student Name: See Lai Suan
+
+     Student ID: 22032574
+
+     Class: C369-2D-E63C-A
+
+     Date/Time Last modified: 13/8/2023 17:03
+
+    -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meddler - Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <form action="GA_Sign_up.html" onsubmit="return showRegisterSuccess()">
+        <h1>Login</h1>
+        <div class="input-box">
+            <input type="text" placeholder="Enter Contact number/Email" required>
+        </div>
+        <div class="input-box">
+            <input id = "newPassword" type="password" placeholder="Enter password" required>
+        </div>
+        <div class="input-box">
+            <input id = "confirmPassword" type="password" placeholder="Confirm password" required>
+            <p id="passwordError">Passwords do not match!</p>
+        </div>
+
+        <button type = "submit" class="btn">Register</button>
+
+    </form>
+
+    <div class="singpass">
+        <a href="https://login.singpass.gov.sg/spservice/welcome"> 
+            <button class = "btn">Login with <span style = "color: red">Singpass</span></button>
+        </a>
+    </div>
+
+    <div class="google">
+        <a href="https://accounts.google.com/v3/signin/identifier?flowEntry=ServiceLogin&flowName=GlifWebSignIn&hl=en-GB&ifkv=AXo7B7W9V2gGpR8QFjvaoZskh6w2APeup6qrLL8AjrZRTX0vA8ud76limrVDSqzeKidORrDWcvww&dsh=S-1945503066%3A1691322494222103">
+            <button class = "btn">Login with <span style= "color: blue">Google</span></button>
+        </a>
+    </div>
+
+</div>
+
+<script>
+    function showRegisterSuccess() {
+        var newPassword = document.getElementById("newPassword").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+    
+    if (newPassword !== confirmPassword) {
+            document.getElementById("passwordError").style.display = "block";
+            return false;
+        } else {
+            alert("You have successfully registered with Meddler!!");
+            return true;
+        }
+    }
+</script>
+
+    
+</body>
+</html>

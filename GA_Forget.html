@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <!--
+
+     I declare that this code was written by me. 
+
+     I will not copy or allow others to copy my code. 
+
+     I understand that copying code is considered as plagiarism.
+
+ 
+
+     Student Name: See Lai Suan
+
+     Student ID: 22032574
+
+     Class: C369-2D-E63C-A
+
+     Date/Time Last modified: 13/8/2023 17:03
+
+    -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meddler -Login</title>
+    <link rel="stylesheet" href="forget.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <form action="GA_Sign_up.html" onsubmit="return showForgetSuccess()">
+        <h1>Login</h1>
+        <div class="input-box">
+            <input type="text" placeholder="Enter Username/Contact number/Email" required>
+        </div>
+        <div class="input-box">
+            <input id = "newPassword" type="password" placeholder="Enter new password" required>
+        </div>
+        <div class="input-box">
+            <input id = "confirmPassword" type="password" placeholder="Re-enter new password" required>
+            <p id="passwordError">Passwords do not match!</p>
+        </div>
+
+        <button type = "submit" class="btn">Reset password</button>
+
+    </form>
+</div>
+
+<script>
+    function showForgetSuccess() {
+        var newPassword = document.getElementById("newPassword").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+    
+    if (newPassword !== confirmPassword) {
+            document.getElementById("passwordError").style.display = "block";
+            return false;
+        } else {
+            alert("You have successfully reset your password!");
+            return true;
+        }
+    }
+</script>
+
+    
+</body>
+</html>

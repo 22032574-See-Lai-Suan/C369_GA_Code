@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+        <!--
+
+     I declare that this code was written by me. 
+
+     I will not copy or allow others to copy my code. 
+
+     I understand that copying code is considered as plagiarism.
+
+ 
+
+     Student Name: See Lai Suan
+
+     Student ID: 22032574
+
+     Class: C369-2D-E63C-A
+
+     Date/Time Last modified: 13/8/2023 17:03
+
+    -->
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meddler - Transaction</title>
+  <link rel="stylesheet" href="transaction.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+          <img src="images/Meddler.png" alt="Meddler logo" class="logo">
+            <ul>
+              <li> <a href="GA_Home(AfterLogin).html" class="nav-link"> Homepage </a> </li>
+              <li> <a href="GA_Products(AfterLogin).html" class="nav-link"> Products & Services</a> </li>
+              <li> <a href="GA_About_us(AfterLogin).html" class="nav-link" > About us</a> </li>
+            </ul>
+  
+            <div class="user">
+              <div class="container">
+                <img src="Images/User.png" alt="User logo" class="user_logo"> User
+              </div>
+            </div>
+        </nav>
+      </div>
+
+  <main class="transaction-container">
+    <div class="transaction-form">
+      <h2>Place a Transaction</h2>
+      <form action="#" id="transactionForm">
+        <label for="stockSymbol">Stock Symbol:</label>
+        <input type="text" id="stockSymbol" name="stockSymbol" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+
+        <label for="transactionType">Transaction Type:</label>
+        <select id="transactionType" name="transactionType" required>
+            <option value="buy">Buy</option>
+            <option value="sell">Sell</option>
+        </select>
+
+        <button type="submit">Place Transaction</button>
+      </form>
+
+      <div id="transactionResult" class="transaction-success" style="display: none;">
+        Transaction successfully placed!
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const transactionForm = document.getElementById("transactionForm");
+    const transactionResult = document.getElementById("transactionResult");
+
+    transactionForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      transactionResult.style.display = "block";
+
+      transactionResult.classList.remove("transaction-fade");
+      void transactionResult.offsetWidth;
+      transactionResult.classList.add("transaction-fade")
+
+      setTimeout(() => {
+        transactionResult.style.display = "none";
+      }, 4000);
+    });
+  </script>
+</body>
+</html>
